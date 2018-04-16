@@ -52,12 +52,18 @@ int PTriangle(void)
 int isoscelesTriangle(void)
 {
 	double sideA, sideB, sideC;
-	std::string Chosenside;
+	
+	double Perimeter = 2 * sideA + sideB;
+	double Alititude;
+	
 
-	std::cout << "Please enter the side you want to solve >>>" << std::endl;
-	std::cin >> Chosenside;
-	std::cout << "" << std::endl;
-
+	std::cout << "Please enter the sides of the triangle >>>" << std::endl;
+	std::cin >> sideA;
+	std::cout << "Now enter the base >>>" << std::endl;
+	std::cin >> sideB;
+	double height = sqrt((sideA * sideA) - (sideB * sideB) /4);
+	double Area = 0.5 * sideB * sideA;
+	std::cout << "The area is " << Area << " and the Perimeter is " << Perimeter << " The height is " << height << std::endl;
 
 
 	system("Pause");
@@ -67,9 +73,10 @@ int isoscelesTriangle(void)
 int main()
 {
 	
-	PTriangle();
-	isoscelesTriangle();
 	
+		PTriangle();
+		isoscelesTriangle();
+
 	system("Pause");
 	return 0;
 }

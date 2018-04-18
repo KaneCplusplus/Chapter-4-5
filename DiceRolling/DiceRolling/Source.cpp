@@ -28,7 +28,8 @@ int main()
 		std::cout << "The goal is to roll a 2, Type 'R' when you are ready >>>>" << std::endl;
 		std::cin >> UserChoice;
 
-		if (UserChoice == "R" || UserChoice == "r")
+		//if (UserChoice == "R" || UserChoice == "r")
+		if (UserChoice.find("r") != std::string::npos)
 		{
 			std::cout << diceArray[(DieRoll - 1)] << std::endl;
 			std::cout << DieRoll << " is what you rolled." << std::endl;
